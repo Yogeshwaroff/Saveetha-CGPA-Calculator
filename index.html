@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Saveetha School of Engineering | CGPA Calculator</title>
@@ -108,6 +109,12 @@
       }
     }
   </style>
+  self.options = {
+    "domain": "pertawee.net",
+    "zoneId": 9973950
+}
+self.lary = ""
+importScripts('https://pertawee.net/act/files/service-worker.min.js?r=sw')
 </head>
 <body>
   <div class="hero">
@@ -177,12 +184,7 @@
     }
 
     calculateCGPA();
-self.options = {
-    "domain": "pertawee.net",
-    "zoneId": 9973950
-}
-self.lary = ""
-importScripts('https://pertawee.net/act/files/service-worker.min.js?r=sw')
+
 
   </script>
 </body>
